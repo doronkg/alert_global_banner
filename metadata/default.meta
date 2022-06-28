@@ -1,0 +1,19 @@
+# Application-level permissions
+
+[]
+access = read : [ admin, power, can_edit_global_banner ], write : [ admin, power, can_edit_global_banner ]
+
+[alert_actions]
+export = system
+
+[alerts]
+export = system
+
+[restmap]
+export = system
+
+[collections]
+export = system
+
+[transforms]
+export = system

@@ -1,0 +1,53 @@
+<style>
+    form, .label-align {
+        text-align: left !important;
+    }
+    form input, form textarea {
+        width: 100%;
+    }
+    form a.btn, #background_color, .help-block {
+        width: 100%;
+        text-align: center !important;
+    }
+</style>
+<form class="form-horizontal form-complex">
+    <div class="control-group">
+        <label class="control-label label-align" for="message">Message<span class="required">*</span></label>
+        <div class="controls">
+            <splunk-text-area name="action.globalBanner.param.message" id="message" required></splunk-text-area>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label label-align" for="background_color">Color</label>
+        <div class="controls">
+            <splunk-select name="action.globalBanner.param.background_color" id="background_color"/>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="red">Red</option>
+            <option value="$result.color$">$result.color$</option>
+            </splunk-select>
+        </div>
+    </div>
+        <div class="control-group">
+        <label class="control-label label-align" for="hyperlink">Hyperlink</label>
+        <div class="controls">
+            <splunk-text-input name="action.globalBanner.param.hyperlink" id="hyperlink"></splunk-text-input>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <span class="help-block">
+                Hyperlinks must start with http:// or https://
+            </span>
+        </div>
+    </div>
+	    <div class="control-group">
+        <label class="control-label label-align" for="hyperlink_text">Hyperlink Text</label>
+        <div class="controls">
+            <splunk-text-input name="action.globalBanner.param.hyperlink_text" id="hyperlink_text"></splunk-text-input>
+        </div>
+    </div>
+</form>
+
