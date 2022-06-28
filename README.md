@@ -13,14 +13,14 @@ This alert action is designated for the system's admins to use in times when a m
     * `Message` - Banner notification text.
 
 2. The action can also accept 3 <ins>optional</ins> inputs:
-    * `background_color` - Indicates the color of the banner: [green | blue | yellow | orange | red | $result.color$]. <br>
+    * `background_color` - Indicates the color of the banner: [green | blue | yellow | orange | red | `$result.color$`]. <br>
      --> `$result.color$` is used for assigning dynamic values based on search results. __Default: blue__.
     * `hyperlink` - The link included in the banner, must start with `http://` or `https://`.
     * `hyperlink_text` - Display text for the link in the banner.
 ---
 
 ### Notes:
-- To use the alert action, the user must be __admin__ or either assigned with the `can_edit_global_banner` role. (see [authorize.conf](https://gitlab.com/-/ide/project/doronkg/alert_banner/tree/main/-/default/authorize.conf/)).
+- To use the alert action, the user must be __admin__ or either be assigned with the `can_edit_global_banner` role. (see [authorize.conf](https://github.com/doronkg/alert_global_banner/blob/master/default/authorize.conf)).
 - Only __one__ Global Banner could be displayed at a given time.
 - The Global Banner will be displayed until it reaches its `expiration_timeout` which derives from the field `$alert.expires$`. __Default: 24h__ (also the max time, longer than that the action is killed).
 
